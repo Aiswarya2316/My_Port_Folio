@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Projects</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <header>
+        <h1>My Projects</h1>
+        <nav>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/about">About Me</a></li>
+                <li><a href="/projects">Projects</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section>
+            <!-- Project 1: Bloom-Glow -->
+            <div class="project-container">
+                <img src="{{ url_for('static', filename='images/jewelry-shop-window-26788516.webp') }}" alt="Bloom-Glow Project" class="project-img">
+                <div class="project-text">
+                    <h2>Project 1: Bloom-Glow</h2>
+                    <p>An online Jewelry shop where users can buy products online. Built with Django, HTML, CSS, and Bootstrap.</p>
+                </div>
+            </div>
+
+            <!-- Project 2: Sail-Stream -->
+            <div class="project-container">
+                <img src="{{ url_for('static', filename='images/woman-dress-shop-interior-31913485.webp') }}" alt="Sail-Stream Project" class="project-img">
+                <div class="project-text">
+                    <h2>Project 2: Sail-Stream</h2>
+                    <p>This is a simple React project used to add and view products using an API.</p>
+                </div>
+            </div>
+
+            <!-- Project 3: Employemanagement -->
+            <div class="project-container">
+                <img src="{{ url_for('static', filename='images/employe-management.webp') }}" alt="Employee Management Project" class="project-img">
+                <div class="project-text">
+                    <h2>Project 4: Employee Management</h2>
+                    <p>An employee management system where you can add, view, and delete employees.</p>
+                </div>
+            </div>
+
+            <!-- Project 4: My Portfolio -->
+            <div class="project-container">
+                <img src="{{ url_for('static', filename='images/portfolio.jpeg') }}" alt="My Portfolio" class="project-img">
+                <div class="project-text">
+                    <h2>Project 3: My Portfolio</h2>
+                    <p>This portfolio website you're currently viewing! Built with Flask and simple front-end technologies.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 [Your Name]. All rights reserved.</p>
+    </footer>
+</body>
+</html>

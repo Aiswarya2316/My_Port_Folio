@@ -18,9 +18,15 @@
         </nav>
     </header>
     <main>
-        <section>
-            <h2>Hi, I'm Aiswarya Krishnan</h2>
-            <p>This is my portfolio website where you can learn more about me and my work.</p>
+        <section class="profile-section">
+            <div class="profile-img-container">
+                <!-- Image and text inside container -->
+                <img src="{{ url_for('static', filename='images/photo-1453928582365-b6ad33cbcf64.jpeg') }}" alt="Profile Picture" class="profile-img">
+                <div class="profile-text">
+                    <h2>Hi, I'm Aiswarya Krishnan</h2>
+                    <p>This is my portfolio website where you can learn more about me and my work.</p>
+                </div>
+            </div>
         </section>
     </main>
     <footer>

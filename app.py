@@ -1,11 +1,12 @@
 from flask import Flask, render_template
+import sqlite3
 
 app = Flask(__name__)
 
 # Home route
 @app.route('/')
 def home():
-    return render_template('index.html')
+    return render_template('home.html')
 
 # About route
 @app.route('/about')
@@ -17,5 +18,4 @@ def about():
 def projects():
     return render_template('projects.html')
 
-if __name__ == '__main__':
-    app.run(debug=True)
+app.run()

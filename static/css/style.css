@@ -1,14 +1,16 @@
+/* General styles for the body and header */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f0f0f0;
+    background-color: #f4f4f4;
 }
 
 header {
     background-color: #333;
     color: white;
-    padding: 1rem;
+    padding: 20px;
+    text-align: center;
 }
 
 header h1 {
@@ -30,19 +32,133 @@ nav ul li a {
     text-decoration: none;
 }
 
-main {
-    padding: 2rem;
-    background-color: white;
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+
+/* Profile section styling */
+.profile-section {
     margin: 20px;
-    border-radius: 8px;
+}
+
+.profile-img-container {
+    position: relative;
+    width: 100%;
+    max-width: 1000px; /* Limit the maximum width of the image container */
+    margin: 0 auto;
+}
+
+.profile-img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 10px;
+}
+
+/* Styling for text over the image */
+.profile-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.profile-text h2 {
+    margin: 0;
+    font-size: 24px;
+}
+
+.profile-text p {
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+/* Responsive design: Adjust text and image size on smaller screens */
+@media (max-width: 768px) {
+    .profile-img {
+        width: 90%;
+    }
+
+    .profile-text h2 {
+        font-size: 20px;
+    }
+
+    .profile-text p {
+        font-size: 14px;
+    }
 }
 
 footer {
     background-color: #333;
     color: white;
     text-align: center;
-    padding: 1rem;
+    padding: 10px;
     position: fixed;
     width: 100%;
     bottom: 0;
+}
+
+/* Project container styling */
+.project-container {
+    position: relative;
+    width: 100%;
+    max-width: 600px; /* Limit the maximum width */
+    margin: 20px auto;
+}
+
+.project-img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 10px;
+}
+
+/* Styling for the text inside the image */
+.project-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.6); /* Semi-transparent black background */
+    padding: 20px;
+    border-radius: 10px;
+    width: 80%; /* Adjust width to ensure the text container fits well inside the image */
+}
+
+.project-text h2 {
+    margin: 0;
+    font-size: 24px;
+}
+
+.project-text p {
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+/* Responsive design: Adjust text and image size on smaller screens */
+@media (max-width: 768px) {
+    .project-img {
+        width: 90%; /* Make image slightly larger on small screens */
+    }
+
+    .project-text h2 {
+        font-size: 20px;
+    }
+
+    .project-text p {
+        font-size: 14px;
+    }
 }
