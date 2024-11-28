@@ -5,8 +5,99 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Me</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <style>
+        /* Basic styling */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            text-align: center;
+            padding: 20px;
+            background-color: #333;
+            color: white;
+        }
+
+        header h1 {
+            margin: 0;
+        }
+
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin-right: 10px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #fff;
+            font-weight: bold;
+        }
+
+        /* About Me Section Styling */
+        main {
+            position: relative;
+        }
+
+        .profile-container {
+            position: relative;
+            width: 100%;
+            height: 850px; /* Height of the image section */
+            background-image: url('{{ url_for('static', filename='images/flat-lay-desk-arrangement-with-copy-space_23-2148928165.avif') }}');
+            background-size: cover;
+            background-position: center;
+        }
+
+        /* Content inside the image */
+        .profile-content {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: white;
+            text-align: center;
+            background-color: rgba(0, 0, 0, 0.5); /* Optional: Adds a dark overlay behind text */
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        .profile-content h2 {
+            margin: 0;
+            font-size: 2em;
+        }
+
+        .profile-content p {
+            font-size: 1.2em;
+        }
+
+        /* Other Sections */
+        section {
+            padding: 20px;
+            margin: 20px;
+        }
+
+        section h2 {
+            color: #333;
+        }
+
+        footer {
+            text-align: center;
+            padding: 10px;
+            background-color: #333;
+            color: white;
+            margin-top: 40px;
+        }
+
+    </style>
 </head>
 <body>
+
     <header>
         <h1>About Me</h1>
         <nav>
@@ -17,27 +108,39 @@
             </ul>
         </nav>
     </header>
+
     <main>
-        <section>
-            <img src="{{ url_for('static', filename='images/profile.jpg') }}" alt="Profile Picture" class="profile-img">
-            <h2>I'm Aiswarya Krishnan</h2>
-            <p>I am a Python Fullstack Develepor with a passion for building beautiful, responsive websites.</p>
-            <p>Here is a little bit about my journey and experience in tech...</p>
-        </section>
-        <section>
-            <h2>My skills</h2>
-            <p>1) web page designing</p>
-            <p>2) Front end developer</p>
-        </section>
-        <section>
-            <h2>Education</h2>
-            <p>1) Bachelor of computer application in Swami Saswathikananda College</p>
-            <p>2) Python Fullstak Developer in Synnefo Solutions</p>
-        </section>
+        <!-- Profile Image Section -->
+        <div class="profile-container">
+            <div class="profile-content">
+                <h2>I'm Aiswarya Krishnan</h2>
+                <p>I am a Python Fullstack Developer with a passion for building beautiful, responsive websites.</p>
+                <p>Here is a little bit about my journey and experience in tech...</p>
+                <section>
+                    <h2>My skills</h2>
+                    <p>1) Web page designing</p>
+                    <p>2) Front-end development</p>
+                </section>
+
+                <section>
+                    <h2>Education</h2>
+                    <p>1) Bachelor of Computer Application from Swami Saswathikananda College</p>
+                    <p>2) Python Fullstack Developer from Synnefo Solutions</p>
+                </section>
+        
+            </div>
+        </div>
+
+        <!-- Skills Section -->
+        
+
+        <!-- Education Section -->
         
     </main>
+
     <footer>
         <p>&copy; 2024 Aiswarya Krishnan. All rights reserved.</p>
     </footer>
+
 </body>
 </html>

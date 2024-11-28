@@ -42,6 +42,10 @@ footer {
     bottom: 0;
 }
 
+h1{
+    text-align: center;
+}
+
 /* Profile section styling */
 .profile-section {
     margin: 20px;
