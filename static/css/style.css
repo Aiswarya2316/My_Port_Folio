@@ -3,7 +3,7 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
+    background-color: #3f3f3f;
 }
 
 header {
@@ -114,43 +114,49 @@ footer {
 }
 
 /* Project container styling */
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 columns */
+    gap: 20px; /* Space between containers */
+}
+
+/* Styling for each project container */
 .project-container {
-    position: relative;
-    width: 100%;
-    max-width: 600px; /* Limit the maximum width */
-    margin: 20px auto;
+    max-width: 700px;
+    max-height: 700px;
+    border: 1px solid #464444;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
+/* Styling for project images */
 .project-img {
-    width: 100%;
-    height: auto;
-    display: block;
-    border-radius: 10px;
+    width: 200px;
+    height: 200px;
+    border-radius: 8px;
 }
 
-/* Styling for the text inside the image */
+/* Project text styling */
 .project-text {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    color: white;
-    text-align: center;
-    background-color: rgba(0, 0, 0, 0.6); /* Semi-transparent black background */
-    padding: 20px;
-    border-radius: 10px;
-    width: 80%; /* Adjust width to ensure the text container fits well inside the image */
+    padding: 10px;
 }
 
 .project-text h2 {
-    margin: 0;
-    font-size: 24px;
+    font-size: 1.5rem;
+    color: #f0a9a9;
 }
 
 .project-text p {
-    font-size: 16px;
-    margin-top: 10px;
+    font-size: 1rem;
+    color: #c4bdbd;
 }
+
+.project-text a {
+    color: #eef3ef;
+    text-decoration: none;
+}
+
 
 /* Responsive design: Adjust text and image size on smaller screens */
 @media (max-width: 768px) {
