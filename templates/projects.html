@@ -5,70 +5,86 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Projects</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
     <header>
-        <h1>My Projects</h1>
-        <nav>
-            <ul>
-                <li><a href="/">Home</a></li>
-                <li><a href="/about">About Me</a></li>
-                <li><a href="/projects">Projects</a></li>
-            </ul>
-        </nav>
+        <div class="container header-content">
+            <h1>My Projects</h1>
+            <nav>
+                <ul>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/about">About Me</a></li>
+                    <li><a href="/projects" class="active">Projects</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
     <main>
-        <section>
-            <!-- Container for projects -->
-            <div class="project-grid">
-                <!-- Project 1: Bloom-Glow -->
-                <a href="https://github.com/Aiswarya2316/Bloom-Glow.git">
+        <section class="projects-section">
+            <div class="container project-grid">
+                <!-- Project Cards -->
                 <div class="project-container">
-                    <img src="{{ url_for('static', filename='images/jewelry-shop-window-26788516.webp') }}" alt="Bloom-Glow Project" class="project-img">
-                    <div class="project-text">
-                        <h2>Project 1: Bloom-Glow</h2>
-                        <p>An online Jewelry shop where users can buy products online. Built with Django, HTML, CSS, and Bootstrap.</p>
-                    </div>
+                    <a href="https://github.com/Aiswarya2316/Bloom-Glow.git">
+                        <img src="{{ url_for('static', filename='images/jewelry-shop-window-26788516.webp') }}" alt="Bloom-Glow Project" class="project-img">
+                        <div class="project-text">
+                            <h2>Bloom-Glow</h2>
+                            <p>Online Jewelry shop with Django, HTML, CSS, and Bootstrap.</p>
+                        </div>
+                    </a>
                 </div>
-                </a>
-
-                <!-- Project 2: Sail-Stream -->
-                <a href="https://github.com/Aiswarya2316/Sail-Stream.git">
                 <div class="project-container">
-                    <img src="{{ url_for('static', filename='images/woman-dress-shop-interior-31913485.webp') }}" alt="Sail-Stream Project" class="project-img">
-                    <div class="project-text">
-                        <h2>Project 2: Sail-Stream</h2>
-                        <p>This is a simple React project used to add and view products using an API.</p>
-                    </div>
+                    <a href="https://github.com/Aiswarya2316/SailStream.git">
+                        <img src="{{ url_for('static', filename='images/woman-dress-shop-interior-31913485.webp') }}" alt="Sail-Stream Project" class="project-img">
+                        <div class="project-text">
+                            <h2>Sail-Stream</h2>
+                            <p>React project to add/view products using an API.</p>
+                        </div>
+                    </a>
                 </div>
-                </a>
-
-                <!-- Project 3: Employemanagement -->
-                <a href="https://github.com/Aiswarya2316/Employemanagement.git">
                 <div class="project-container">
-                    <img src="{{ url_for('static', filename='images/employe-management.webp') }}" alt="Employee Management Project" class="project-img">
-                    <div class="project-text">
-                        <h2>Project 3: Employee Management</h2>
-                        <p>An employee management system where you can add, view, and delete employees.</p>
-                    </div>
+                    <a href="https://github.com/Aiswarya2316/Employemanagement.git">
+                        <img src="{{ url_for('static', filename='images/employe-management.webp') }}" alt="Employee Management Project" class="project-img">
+                        <div class="project-text">
+                            <h2>Employee Management</h2>
+                            <p>Add, view, and delete employees easily.</p>
+                        </div>
+                    </a>
                 </div>
-                </a>
-
-                <!-- Project 4: My Portfolio -->
-                <a href="https://github.com/Aiswarya2316/My_Port_Folio.git">
                 <div class="project-container">
-                    <img src="{{ url_for('static', filename='images/portfolio.jpeg') }}" alt="My Portfolio" class="project-img">
-                    <div class="project-text">
-                        <h2>Project 4: My Portfolio</h2>
-                        <p>This portfolio website you're currently viewing! Built with Flask and simple front-end technologies.</p>
-                    </div>
+                    <a href="https://github.com/Aiswarya2316/My_Port_Folio.git">
+                        <img src="{{ url_for('static', filename='images/portfolio.jpeg') }}" alt="My Portfolio" class="project-img">
+                        <div class="project-text">
+                            <h2>My Portfolio</h2>
+                            <p>Portfolio website built with Flask.</p>
+                        </div>
+                    </a>
                 </div>
-                </a>
+                <div class="project-container">
+                    <a href="https://github.com/Aiswarya2316/Justice-Link.git">
+                        <img src="{{ url_for('static', filename='images/legal-law-concept-image-scales-justice-golden-light-legal-law-concept-image-scales-justice-golden-light-background-116766827.webp') }}" alt="Justice-Link" class="project-img">
+                        <div class="project-text">
+                            <h2>Justice-Link</h2>
+                            <p>Online Advocate Booking platform using Django.</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="project-container">
+                    <a href="https://github.com/Aiswarya2316/Tasty-Treats.git">
+                        <img src="{{ url_for('static', filename='images/unnamed.webp') }}" alt="Tasty Treats" class="project-img">
+                        <div class="project-text">
+                            <h2>Tasty Treats</h2>
+                            <p>Front-end for a food delivery website.</p>
+                        </div>
+                    </a>
+                </div>
             </div>
         </section>
     </main>
     <footer>
-        <p>&copy; 2024 [Your Name]. All rights reserved.</p>
+        <div class="container">
+            <p>@ 2024 [Your Name]. All rights reserved.</p>
+        </div>
     </footer>
 </body>
 </html>

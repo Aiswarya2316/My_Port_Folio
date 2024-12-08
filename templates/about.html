@@ -6,13 +6,19 @@
     <title>About Me</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
     <style>
-        /* Basic styling */
-        body {
-            font-family: Arial, sans-serif;
+        /* Basic Reset */
+        * {
             margin: 0;
             padding: 0;
+            box-sizing: border-box;
         }
 
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+        }
+
+        /* Header Styling */
         header {
             text-align: center;
             padding: 20px;
@@ -21,40 +27,45 @@
         }
 
         header h1 {
-            margin: 0;
+            margin-bottom: 10px;
+            font-size: 2rem;
         }
 
         nav ul {
             list-style-type: none;
             padding: 0;
+            display: flex;
+            justify-content: center;
+            gap: 15px;
         }
 
         nav ul li {
             display: inline;
-            margin-right: 10px;
         }
 
         nav ul li a {
             text-decoration: none;
             color: #fff;
             font-weight: bold;
+            padding: 5px 10px;
+            transition: background 0.3s;
         }
 
-        /* About Me Section Styling */
-        main {
-            position: relative;
+        nav ul li a:hover {
+            background-color: #ff7f50;
+            border-radius: 4px;
         }
 
+        /* Profile Section */
         .profile-container {
             position: relative;
             width: 100%;
-            height: 850px; /* Height of the image section */
+            height: 60vh; /* Responsive height */
             background-image: url('{{ url_for('static', filename='images/flat-lay-workstation-with-copy-space-laptop_23-2148430879.avif') }}');
             background-size: cover;
             background-position: center;
         }
 
-        /* Content inside the image */
         .profile-content {
             position: absolute;
             top: 50%;
@@ -62,38 +73,111 @@
             transform: translate(-50%, -50%);
             color: white;
             text-align: center;
-            background-color: rgba(0, 0, 0, 0.5); /* Optional: Adds a dark overlay behind text */
+            background-color: rgba(0, 0, 0, 0.6);
             padding: 20px;
             border-radius: 10px;
+            width: 90%; /* Adjusts for smaller screens */
+            max-width: 600px;
         }
 
         .profile-content h2 {
-            margin: 0;
-            font-size: 2em;
+            font-size: 2rem;
+            margin-bottom: 10px;
         }
 
         .profile-content p {
-            font-size: 1.2em;
+            font-size: 1rem;
+            margin-bottom: 15px;
         }
 
-        /* Other Sections */
+        /* Sections */
         section {
             padding: 20px;
-            margin: 20px;
+            margin: 20px auto;
+            max-width: 800px;
+            color:white;
         }
 
         section h2 {
             color: #333;
+            font-size: 1.5rem;
+            margin-bottom: 10px;
         }
 
+        section p {
+            font-size: 1rem;
+            margin-bottom: 8px;
+        }
+
+        /* Footer */
         footer {
             text-align: center;
-            padding: 10px;
+            padding: 15px;
             background-color: #333;
             color: white;
-            margin-top: 40px;
         }
 
+        /* Media Queries for Responsiveness */
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 1.8rem;
+            }
+
+            nav ul {
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            .profile-container {
+                height: 70vh; /* Adjusted for smaller devices */
+            }
+
+            .profile-content h2 {
+                font-size: 1.8rem;
+            }
+
+            .profile-content p {
+                font-size: 0.9rem;
+            }
+
+            section h2 {
+                font-size: 1.3rem;
+            }
+
+            section p {
+                font-size: 0.9rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            header h1 {
+                font-size: 1.5rem;
+            }
+
+            nav ul {
+                gap: 8px;
+            }
+
+            .profile-content {
+                padding: 15px;
+            }
+
+            .profile-content h2 {
+                font-size: 1.5rem;
+            }
+
+            .profile-content p {
+                font-size: 0.8rem;
+            }
+
+            section h2 {
+                font-size: 1.2rem;
+            }
+
+            section p {
+                font-size: 0.8rem;
+            }
+        }
     </style>
 </head>
 <body>
@@ -103,7 +187,7 @@
         <nav>
             <ul>
                 <li><a href="/">Home</a></li>
-                <li><a href="/about">About Me</a></li>
+                <li><a href="/about" class="active">About Me</a></li>
                 <li><a href="/projects">Projects</a></li>
             </ul>
         </nav>
@@ -114,33 +198,29 @@
         <div class="profile-container">
             <div class="profile-content">
                 <h2>I'm Aiswarya Krishnan</h2>
-                <p>I am a Python Fullstack Developer with a passion for building beautiful, responsive websites.</p>
+                <p>A Python Fullstack Developer with a passion for building beautiful, responsive websites.</p>
                 <p>Here is a little bit about my journey and experience in tech...</p>
-                <section>
-                    <h2>My skills</h2>
-                    <p>1) Web page designing</p>
-                    <p>2) Front-end development</p>
-                    <p>3)Back-end development</p>
-                </section>
-
-                <section>
-                    <h2>Education</h2>
-                    <p>1) Bachelor of Computer Application from Swami Saswathikananda College</p>
-                    <p>2) Python Fullstack Developer from Synnefo Solutions</p>
-                </section>
-        
             </div>
         </div>
 
         <!-- Skills Section -->
-        
+        <section>
+            <h2>My Skills</h2>
+            <p>1) Web page designing</p>
+            <p>2) Front-end development</p>
+            <p>3) Back-end development</p>
+        </section>
 
         <!-- Education Section -->
-        
+        <section>
+            <h2>Education</h2>
+            <p>1) Bachelor of Computer Application from Swami Saswathikananda College</p>
+            <p>2) Python Fullstack Developer from Synnefo Solutions</p>
+        </section>
     </main>
 
     <footer>
-        <p>&copy; 2024 Aiswarya Krishnan. All rights reserved.</p>
+        <p>@ 2024 Aiswarya Krishnan. All rights reserved.</p>
     </footer>
 
 </body>
